@@ -17,13 +17,3 @@ CREATE TABLE estabelecimento(
   horario_fechamento time,
   ativo boolean
 )
-
-SELECT * FROM estabelecimento;
-
-SELECT * FROM estabelecimento_favorito;
-
-INSERT INTO estabelecimento (nome, categoria, faixa_preco, avaliação_media, latitude, longitude, horario_abertura, horario_fechamento);
-
-INSERT INTO estabelecimento_favorito (id_estabelecimento,id_usuario) values ('123','635');
-
-delete from estabelecimento_favorito
