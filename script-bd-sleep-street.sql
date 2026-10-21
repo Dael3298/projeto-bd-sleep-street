@@ -258,7 +258,28 @@ id_solicitante INT NOT NULL,
  id_moderador_analista int,
  data_soliticao timestamp,
  data_atualizacao timestamp
- );
+ )
+  INSERT INTO solicitacao_reembolso (
+id_solicitacao_reembolso,
+id_usuario,
+id_viajem,
+data_solicitacao,
+valor_solicitado,
+descricao,
+status,
+arquivo_comprovante
+)
+VALUES
+(1, 123, 1, NOW(), 350.00, 'Passagem aérea ida e volta', 'aprovado', 'comprovante_1.pdf'),
+(2, 123, 2, NOW(), 280.00, 'Hotel 5 noites', 'aprovado', 'comprovante_2.pdf'),
+(3, 456, 3, NOW(), 120.00, 'Alimentação e transporte local', 'aprovado', 'comprovante_3.pdf'),
+(4, 456, 4, NOW(), 450.00, 'Ingressos e passeios', 'pendente', NULL),
+(5, 789, 5, NOW(), 190.00, 'Transporte local e táxi', 'aprovado', 'comprovante_5.pdf'),
+(6, 789, 6, NOW(), 95.00, 'Alimentação', 'aprovado', 'comprovante_6.pdf'),
+(7, 123, 7, NOW(), 280.00, 'Ingresso para concerto', 'aprovado', 'comprovante_7.pdf'),
+(8, 456, 8, NOW(), 75.00, 'Compras e souvenirs', 'aprovado', 'comprovante_8.pdf'),
+(9, 789, 9, NOW(), 200.00, 'Depósito na conta', 'aprovado', 'comprovante_9.pdf'),
+(10, 123, 10, NOW(), 85.00, 'Compras no aeroporto', 'pendente', NULL);
 
 CREATE TABLE   avaliacao_estabelecimento( 
 id_avaliacao  SERIAL PRIMARY KEY  ,
